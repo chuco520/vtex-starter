@@ -1,0 +1,8 @@
+{
+	"node": true,
+	"browser": true,
+	"curly": false,
+	"undef": true,
+	"devel": true,
+	"jquery": true
+}
