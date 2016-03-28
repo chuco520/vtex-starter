@@ -41,7 +41,7 @@ gulp.task('scripts', function () {
     // .pipe(gulpLoadPlugins.concat('main.min.js'))
     // .pipe(gulpLoadPlugins.uglify({preserveComments: 'some'}))
     // Output files
-    .pipe(gulp.dest('build/arquivos'));
+    .pipe(gulp.dest('build/arquivos/js'));
 });
 
 // Optimize images
@@ -51,7 +51,7 @@ gulp.task('images', function () {
       progressive: true,
       interlaced: true
     }))
-    .pipe(gulp.dest('build/arquivos'));
+    .pipe(gulp.dest('build/arquivos/images'));
 });
 
 gulp.task('sass', function () {
@@ -60,7 +60,7 @@ gulp.task('sass', function () {
         console.error('Error! ', err.message);
     })
     .pipe(sourcemaps.write())
-	.pipe(gulp.dest('build/arquivos'))
+	.pipe(gulp.dest('build/arquivos/css'))
 	// .pipe(rename({suffix: '.min'}))
 	// .pipe(minifycss())
  //  	.pipe(gulp.dest('build/arquivos'))
@@ -69,7 +69,7 @@ gulp.task('sass', function () {
 
 gulp.task('css', function () {
   return gulp.src('src/styles/**/*.css')
-	.pipe(gulp.dest('build/arquivos'))
+	.pipe(gulp.dest('build/arquivos/css'))
 	.pipe(connect.reload());
 });
 
